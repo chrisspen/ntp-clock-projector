@@ -1,0 +1,11 @@
+Writes the servo position to serial.
+
+Compile and upload with:
+
+    make && make upload
+
+To view values:
+
+    make monitor
+
+Then press ctrl + a and then a capital K and press y when it asks if you really want to kill the session.

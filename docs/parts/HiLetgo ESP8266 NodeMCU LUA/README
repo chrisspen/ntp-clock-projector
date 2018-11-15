@@ -1,0 +1,38 @@
+HiLetgo 2pcs ESP8266 NodeMCU LUA CP2102 ESP-12E Internet WIFI Development Board Open source Serial Wireless Module Works Great with Arduino IDE/Micropython (Pack of 2PCS)
+
+ESP8266 ESP-12E NodeMCU
+
+https://www.amazon.com/gp/product/B010N1SPRK
+
+Built-in Micro-USB, with flash and reset switches, easy to program
+Full I/O port and Wireless 802.11 supported, direct download no need to reset
+Arduino compatible, works great with the latest Arduino IDE/Mongoose IoT/Micropython
+Data download access to the website: http://www.nodemcu.com
+Firmware link: https://github.com/nodemcu/nodemcu-firmware 
+
+https://www.instructables.com/id/Programming-ESP8266-ESP-12E-NodeMCU-Using-Arduino-/
+https://www.instructables.com/id/Quick-Start-to-Nodemcu-ESP8266-on-Arduino-IDE/
+
+https://roboindia.com/tutorials/nodemcu-amica-esp8266-board-installation
+
+https://github.com/esp8266/Arduino
+https://github.com/esp8266/Arduino/tree/master/libraries/esp8266/examples/NTP-TZ-DST
+
+I2C
+---
+
+https://www.instructables.com/id/ESP8266-I2C-PORT-and-Address-Scanner/
+
+    "I picked D1(GPIO5), and D2(GPIO4) as my bus ports."
+
+    NodeMCU GPIO5 -> SCL (RTC) -> SCL (OLED)
+    NodeMCU GPIO4 -> SDA (RTC) -> SDA (OLED)
+
+https://www.14core.com/wiring-nodemcu-esp8266-12e-with-i2c-16x2-lcd-screen/
+
+    the SCL as Arduino Analog Pin A4 is connected to D1 on NodeMCU at the same time
+    the D2 as the SDA represent as Analog Pin A5 on Arduino Board
+
+D1 = SDA? SCL?
+D2 = SCL? SDA?
+

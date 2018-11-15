@@ -1,0 +1,13 @@
+"Color","Index","Levels","Backplane","Name","Notes","Mapped"
+"blue",0,4,,,"backplane?",1
+"blue",1,4,0,,,1
+"blue",2,4,0,,,1
+"blue",3,4,0,,,1
+"blue",4,4,,,"control?",1
+"blue",5,4,,,"backplane?",1
+"red",0,1,0,"unused","not used? Always 0V?",0
+"red",1,4,,,"backplane?",1
+"red",2,2,0,"special","used for some static element?",1
+"red",3,4,0,,,1
+"red",4,4,0,,,1
+"red",5,4,,,"backplane?",1

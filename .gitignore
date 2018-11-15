@@ -1,0 +1,5 @@
+*.geany
+*.out
+.env*
+build-*
+openscad-extra
