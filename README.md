@@ -26,6 +26,7 @@ Load the `firmware.ino` sketch, select NodeMCU board and board, verify and uploa
 
 To set the Wifi password, shell into the `scripts` directory and run:
 
+    cd src/scripts
     ./init_virtualenv.sh
     . .env/bin/activate
     ./clock_controller.py login ssid ssidpwd

@@ -59,6 +59,7 @@ module clock_housing(){
                 housing_lid(buffer=0.5);
             }
             
+            // worm gear holder
             if(1){
                 // bottom axle holder
                 if(1)
@@ -92,6 +93,7 @@ module clock_housing(){
             translate([0,0,15.5])
             housing_lid(buffer=0.5);
 
+            if(1)
             color("red")
             translate([gear_d,0,-30])
             worm_gear(
@@ -108,6 +110,8 @@ module clock_housing(){
                 zusammen_gebaut=0,
                 show_spur=1,
                 show_worm=0);
+            
+            if(1)
             difference(){
                 union(){
                     translate([0,0,-2.5/2-20.75])
@@ -121,6 +125,7 @@ module clock_housing(){
             }
 
             // led mount mass
+            if(1)
             difference(){
                 intersection(){
                     cylinder(d=d, h=h, center=true, $fn=100);
@@ -133,6 +138,7 @@ module clock_housing(){
                 led_backpack_holes(d=2);
             }//diff
             
+            if(1)
             intersection(){
                 // nodemcu top mount mass
                 for(i=[0:1])
@@ -180,6 +186,7 @@ module clock_housing(){
         lens_holder_worm_gear(bb=1, buffer=1);
 
         // axle hole
+        if(1)
         color("red")
         translate([0, 35.5, 15/2-1/2+11])
         //cylinder(d=1, h=15, center=true, $fn=100);
@@ -237,11 +244,11 @@ module clock_housing(){
     
 }
 
-module lens_holder_worm_gear(bb=0, buffer=0, axle_d=3){
+module lens_holder_worm_gear(bb=0, buffer=0, buffer_d=0, axle_d=3){
     if(bb){
         color("red")
         translate([0,0,-14.4/2])
-        cylinder(d=13.5+buffer, h=14.4+buffer, center=true, $fn=50);
+        cylinder(d=13.5+buffer+buffer_d, h=14.4+buffer, center=true, $fn=50);
     }else{
         //rotate([0,180,0])
         scale([1,1,1-.04])
@@ -382,9 +389,9 @@ module lens_holder(notch=0){
     }
     
     if(0)
-            translate([-10/2, 29+0, -rack_length/2-8.2 + 1 -10]){
-                lens_holder_rack(bb=0, buffer=0);
-            }
+    translate([-10/2, 29+0, -rack_length/2-8.2 + 1 -10]){
+        lens_holder_rack(bb=0, buffer=0);
+    }
 }
 
 module lens_holder_top(){
@@ -393,6 +400,60 @@ module lens_holder_top(){
 
 module lens_holder_bottom(){
     lens_holder(notch=1);
+}
+
+module collar(){
+    difference(){
+        
+        union(){
+                
+            color("green")
+            //translate([-200,0,0])
+            scale([1,1,.5])
+            sphere(r=35+5/2, $fn=100);
+            
+            
+            // worm gear holder
+            translate([-6.5,4,0])
+            rotate([0,90,0])
+            if(1){
+                // bottom axle holder
+                if(1){
+                hull()
+                for(i=[0:1])
+                color("red")
+                translate([0, 35.5-3-i*5, 41.1-47])
+                scale([1,1.4,1])
+                cylinder(d1=0, d2=15, h=10, center=true, $fn=100);
+                }
+                
+                // top axle holder
+                intersection(){
+                    color("red")
+                    translate([0, 35.5-3, 41.1-21.5])
+                    scale([1,1.4,1])
+                    mirror([0,0,1])
+                    cylinder(d1=0, d2=15, h=10, center=true, $fn=100);
+                    
+                    color("green")
+                    translate([0,0,14.5+3.5/2])
+                    cylinder(d=100, h=3.5, center=true);
+                }
+            }
+        }
+
+        
+        // worm gear cutout
+        if(1)
+        color("blue")
+        //translate([0,35.5,41.1-27])
+        rotate([0,90,0])
+        translate([0,40.5-1,41.1-33.5])
+        lens_holder_worm_gear(bb=1, buffer=1, buffer_d=2);
+
+        cylinder(d=65+1, h=50, center=true, $fn=100);
+        
+    }//diff
 }
 
 // position A
@@ -473,3 +534,15 @@ if(1){
 if(1)
 translate([0,35.5,41.1-27])
 lens_holder_worm_gear(bb=0);
+
+if(1)
+translate([0,0,-25-1]){
+
+    collar();
+
+    if(0)
+    rotate([0,90,0])
+    translate([0,40.5,41.1-33.5])
+    mirror([1,0,0])
+    lens_holder_worm_gear(bb=0);
+}

@@ -97,9 +97,9 @@ void write_time(const tm* tm){
         int minute1 = tm->tm_min/1%10;
         int minute2 = tm->tm_min/10%10;
         int hour = tm->tm_hour;
-        if(!tm->tm_isdst){
-            hour -= 1; // Unapply DST hour?
-        }
+        //if(!tm->tm_isdst){
+        //    hour -= 1; // Unapply DST hour?
+        //}
         hour = hour % 12;
         if(hour == 0 || hour == 12 || hour == 24){
           hour = 12;
