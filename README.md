@@ -19,17 +19,19 @@ Install [NodeMCU Arduino Support](https://github.com/esp8266/Arduino#installing-
 
 * Start Arduino and open Preferences window.
 * Enter http://arduino.esp8266.com/stable/package_esp8266com_index.json into Additional Board Manager URLs field. You can add multiple URLs, separating them with commas.
-* Open Boards Manager from Tools->Board menu and install esp8266 platform
-* Under Tools->Boards, select "ESP-12E".
+* Open Boards Manager from Tools->Board menu and install or update the esp8266 platform.
+* Under Tools->Boards, select "NodeMCU 1.0 (ESP-12E Module)".
 
 Load the `firmware.ino` sketch, select NodeMCU board and board, verify and upload.
 
-To set the Wifi password, shell into the `scripts` directory and run:
+To set the Wifi password dynamically, shell into the `scripts` directory and run:
 
     cd src/scripts
     ./init_virtualenv.sh
     . .env/bin/activate
     ./clock_controller.py login ssid ssidpwd
+
+Otherwise, create the file src/firmware/credentials.h and enter your credentials there, recompile and upload your firmware.
 
 Debugging
 ---------
