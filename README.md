@@ -6,6 +6,8 @@ an NTP client to retrieve the time and project it onto a wall or ceiling.
 
 [[images/IMG_20201216_215617_small.jpg|ntp projection clock]]
 
+![Alt text](/images/IMG_20201216_215617_small.jpg?raw=true "Optional Title")
+
 Setup
 -----
 
