@@ -35,7 +35,7 @@ module led_backpack(face_extend=0, face_buffer=0){
     
 }
 
-module clock_housing(){
+module clock_housing(ring_gear=0){
     d = 65;
     h = 67;
     wall_thickness = 3;
@@ -93,7 +93,7 @@ module clock_housing(){
             translate([0,0,15.5])
             housing_lid(buffer=0.5);
 
-            if(1)
+            if(ring_gear)
             color("red")
             translate([gear_d,0,-30])
             worm_gear(
@@ -111,7 +111,7 @@ module clock_housing(){
                 show_spur=1,
                 show_worm=0);
             
-            if(1)
+            if(0)
             difference(){
                 union(){
                     translate([0,0,-2.5/2-20.75])
@@ -535,7 +535,7 @@ if(1)
 translate([0,35.5,41.1-27])
 lens_holder_worm_gear(bb=0);
 
-if(1)
+if(0)
 translate([0,0,-25-1]){
 
     collar();

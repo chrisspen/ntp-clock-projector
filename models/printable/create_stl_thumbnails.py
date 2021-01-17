@@ -45,7 +45,7 @@ def generate_thumbnails(force=False, **kwargs):
         tmp_fout.write('import("%s");' % os.path.abspath(fn))
         tmp_fout.close()
 
-        cmd = 'openscad --autocenter --projection=ortho --render --viewall --colorscheme=Nature -o %s %s' % (os.path.abspath(thumbnail_fn), tmp_fn)
+        cmd = 'openscad --autocenter --projection=ortho --render --viewall --imgsize=250,250 --colorscheme=Nature -o %s %s' % (os.path.abspath(thumbnail_fn), tmp_fn)
         print(cmd)
         os.system(cmd)
 

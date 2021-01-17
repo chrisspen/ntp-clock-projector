@@ -4,12 +4,21 @@ NTP Projection Clock
 A NodeMCU based clock that wirelessly connects to your network and runs
 an NTP client to retrieve the time and project it onto a wall or ceiling.
 
-[[images/IMG_20201216_215617_small.jpg|ntp projection clock]]
+![](/images/IMG_20201216_215617_small.jpg?raw=true "ntp projection clock")
 
-![Alt text](/images/IMG_20201216_215617_small.jpg?raw=true "Optional Title")
+Construction
+------------
 
-Setup
------
+Print the [stl files](tree/master/models/printable) that comprise the chassis.
+
+Wire the NodeMCU and Adafruit LED Backback like:
+
+![](/docs/parts/HiLetgo ESP8266 NodeMCU LUA/NodeMCU-LCD-Screen-i2c-16x2-Display.jpg?raw=true "wiring diagram")
+
+Screw these boards into the chassis and then plug the NodeMCU into your computer via a USB cable for programming.
+
+Programming
+-----------
 
 Install the Arduino IDE 1.8 or later and NodeMCU Arduino support:
 
