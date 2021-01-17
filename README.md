@@ -4,6 +4,8 @@ NTP Projection Clock
 A NodeMCU based clock that wirelessly connects to your network and runs
 an NTP client to retrieve the time and project it onto a wall or ceiling.
 
+[[/docs/IMG_20201216_215617_small.jpg|ntp projection clock]]
+
 Setup
 -----
 
