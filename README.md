@@ -13,7 +13,7 @@ Print the [stl files](tree/master/models/printable) that comprise the chassis.
 
 Wire the NodeMCU and Adafruit LED Backback like:
 
-![](/docs/parts/HiLetgo ESP8266 NodeMCU LUA/NodeMCU-LCD-Screen-i2c-16x2-Display.jpg?raw=true "wiring diagram")
+![](/images/NodeMCU-LCD-Screen-i2c-16x2-Display.jpg?raw=true "wiring diagram")
 
 Screw these boards into the chassis and then plug the NodeMCU into your computer via a USB cable for programming.
 
