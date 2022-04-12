@@ -17,6 +17,8 @@ Wire the NodeMCU and Adafruit LED Backback like:
 
 Screw these boards into the chassis and then plug the NodeMCU into your computer via a USB cable for programming.
 
+The lens I used was the 10x lens piece found ing the <a target="_blank" href="https://www.amazon.com/iMagniphy-Illuminated-Magnifying-Magnifier-Degeneration/dp/B018I1S2Q6/?&_encoding=UTF8&tag=chrisspen05-20&linkCode=ur2&linkId=9c56961c9553f8b3b0992ff2598e1a36&camp=1789&creative=9325">iMagniphy Glass</a>. Note, it's actually made of two lens sandwiched in a housing.
+
 Programming
 -----------
 
