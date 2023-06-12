@@ -12,7 +12,8 @@
 #include <Wire.h>
 #include "Adafruit_GFX.h"
 #include "Adafruit_LEDBackpack.h"
-#include "EEPROMAnything.h"
+// #include "EEPROMAnything.h"
+#include "EEPROM.h"
 
 #include "credentials.h"
 
@@ -20,12 +21,12 @@
 
 #define CLOCK_UPDATE_T 500
 
-#define MYTZ TZ_America_New_York
+#define MYTZ TZ_America_Los_Angeles
 
 // Persistent variables.
 struct config_t {
-    char ssid[255];
-    char ssidpwd[225];
+    char ssid[255]="";
+    char ssidpwd[225]="";
 } configuration;
 
 unsigned long last_clock_update = 0;
@@ -114,11 +115,17 @@ void time_is_set(void) {
 }
 
 void save_configuration() {
-    EEPROM_writeAnything(0, configuration);
+//  EEPROM_writeAnything(0, configuration);
+    EEPROM.begin(sizeof(configuration));
+    EEPROM.put(0,configuration);
+    EEPROM.commit();
+    EEPROM.end();
 }
 
 void load_configuration() {
-    EEPROM_readAnything(0, configuration);
+    EEPROM.begin(sizeof(configuration));
+    EEPROM.get(0,configuration);
+    EEPROM.end();
 }
 
 String getValue(String data, char separator, int index) {
